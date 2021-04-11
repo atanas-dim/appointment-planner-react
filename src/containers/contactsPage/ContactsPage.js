@@ -38,7 +38,7 @@ export const ContactsPage = (props) => {
       }
     }
 
-  });
+  }, [props.contacts, currentName, duplicates]);
 
   return (
     <div>

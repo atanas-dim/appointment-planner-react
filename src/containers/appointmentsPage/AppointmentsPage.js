@@ -34,7 +34,7 @@ export const AppointmentsPage = (props) => {
       }
     }
 
-  });
+  }, [props.appointments, currentDate, currentTime]);
 
   return (
     <div>
