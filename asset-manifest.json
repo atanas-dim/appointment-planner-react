@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/appointment-planner-react/static/js/main.edc68725.chunk.js",
-    "main.js.map": "/appointment-planner-react/static/js/main.edc68725.chunk.js.map",
+    "main.js": "/appointment-planner-react/static/js/main.833f0ab2.chunk.js",
+    "main.js.map": "/appointment-planner-react/static/js/main.833f0ab2.chunk.js.map",
     "runtime-main.js": "/appointment-planner-react/static/js/runtime-main.578cb75e.js",
     "runtime-main.js.map": "/appointment-planner-react/static/js/runtime-main.578cb75e.js.map",
     "static/js/2.5de9638e.chunk.js": "/appointment-planner-react/static/js/2.5de9638e.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.578cb75e.js",
     "static/js/2.5de9638e.chunk.js",
-    "static/js/main.edc68725.chunk.js"
+    "static/js/main.833f0ab2.chunk.js"
   ]
 }
