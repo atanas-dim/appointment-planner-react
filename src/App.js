@@ -1,24 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Switch, Route, Redirect, NavLink } from "react-router-dom";
+
+import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
+import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
+  
+  const ROUTES = {
+    CONTACTS: "/contacts",
+    APPOINTMENTS: "/appointments",
+  };
+
+  const [contacts, setContacts] = useState([]);
+
+  const addContact = (name, phone, email) => {
+    setContacts((prev) => {
+      return [...prev, {name: name, phone: phone, email: email}];
+    });
+  }
+
+  const [appointments, setAppointments] = useState([]);
+
+  const addAppointment = (title, contact, date, time) => {
+    setAppointments((prev) => {
+      return [...prev, {title: title, contact: contact, date: date, time: time}]
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav>
+        <NavLink to={ROUTES.CONTACTS} activeClassName="active">
+          Contacts
+        </NavLink>
+        <NavLink to={ROUTES.APPOINTMENTS} activeClassName="active">
+          Appointments
+        </NavLink>
+      </nav>
+      <main>
+      
+        <Switch>
+          <Route exact path="/">
+            <Redirect to={ROUTES.CONTACTS} />
+          </Route>
+          <Route path={ROUTES.CONTACTS}>
+            <ContactsPage contacts={contacts} addContact={addContact} />
+          </Route>
+          <Route path={ROUTES.APPOINTMENTS}>
+            <AppointmentsPage appointments={appointments} addAppointment={addAppointment} contacts={contacts} />
+          </Route>
+        </Switch>
+      </main>
+    </>
   );
 }
 
