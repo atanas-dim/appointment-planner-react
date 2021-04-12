@@ -6,7 +6,7 @@ body {
   padding: 30px;
   font-family: "Open Sans", sans-serif;
   background-color: #5f4996;
-  color: #E3F2FD;
+  color: #EDE7F6;
   transition: all 0.6s ease-in-out;
 }
 
@@ -14,7 +14,7 @@ nav > a {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  color: #E3F2FD;
+  color: #EDE7F6;
   margin-right: 30.5px;
   text-decoration-line: none;
 }
@@ -64,8 +64,8 @@ input[type="submit"] {
 input,
 select {
   font-family: "Open Sans", sans-serif;
-  background: #E3F2FD;
-  border: solid 4px #03A9F4;
+  background: #EDE7F6;
+  border: solid 4px #9575CD;
   border-radius: 10px;
   padding: 7px 9.6px 9px 9.6px;
   outline: none;
@@ -99,8 +99,8 @@ label {
 
 button {
   padding: 10px 15px;
-  background-color: #1E88E5;
-  border: solid 4px #03A9F4;
+  background-color: #5E35B1;
+  border: solid 4px #9575CD;
   border-radius: 50px;
   font-weight: 700;
   font-size: 16px;
